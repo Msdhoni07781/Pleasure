@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive page</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!--Navbar-->
+    <header>
+        <a href="#" class="logo"><i class="bx bxs-basket"></i>Delicay</a>
+
+        <!--menu icon-->
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <!--Nav list-->
+        <ul class="navbar">
+            <li><a href="#home" class="home-active">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#customers">Customers</a></li>
+        </ul>
+
+        <!-- profile-->
+        <div class="profile">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8AAADQ0ND8/Pz29vbAwMDw8PD5+flYWFiurq7Ozs6FhYXt7e2BgYHf39/09PRfX1+goKCYmJgcHBzZ2dnk5ORzc3NmZmaQkJA+Pj63t7cWFhYPDw/JyclVVVWysrJJSUkyMjKUlJRMTEwlJSUbGxtAQEBtbW02Njampqbdu22nAAAG/UlEQVR4nO2d6XaqMBCArwhuLK4gxb1are//gveSQK3XBZLMkOGc+f5WwoQks2WS/vnDMAzDMAzDMAzDMAzDMAzDMAzDMAzDwBJ703Dyve4IDoNklkW2RQJkk+47z/jwvb5t2czp7yZPe1dyvPZsi2jEZvm2e5KtZ1tMba7z3x05J+kw24wcZ5MNP5P7eTtr5Wyd3jpw8r344e+Bl37cfuK3ro/D20obBi9/5Wa3VTprUDpzFodC7NW0SpH0h+Vv15tGZAMhLJdePZmdQfH7ZUumarQq+ufUf6TsYyuG8VrMOTUb4BRz1UeSCpCLlDRVfrD4MvsuglCA9L+ledBxOntnOfivVS8BenIJJpqPf8phXIDKBEogJdxpNzAi3sXAXL5gTrmLY4hl1JWeHM3g8ZSLNndNm5E+OcWY6ig6COCViC7OzduBxheffgzRlLA4A4iWIPFEBx9jJB36FGONHqhXGRNUqHvYry5mxBqsOQBEvLsFbFDEXyFgg4ZISwga3J1oWUURT8BmzKK8yW/QJg1YYGh3YX0y4EZ1EWoGPOYhpGwcvYi3iixvdgjerA7CXUNoN1c2K4R2lRE6YYrQsAevv/RIckFQkiv5IJ4xGlajj5ch29GwiUMURSqhkV7cA/trvwmRdJgSPUzDLFyJ+plzHIZoeiZnRWCa5rtjE7TWc9fthNZ6PXAdjxGiGqvJAi538RT77vcVWdsdrS/E3KFZIrb/ad2t+UbySUs86xYRMsP2jNi2qgmQFY38hDZt/gLV3ud8dUx268zBXyZH5IVeRe6zHVDfcLFsLvLKriPqG0LLmeFPVK80J/33hgvqG6rfj2nw5TfEfcN7uIdteMN7pogpDEmuaXTLcyDIrcUH6htsW4sMPS09sLzf7aD7NCfLmxf4rj928FJFF9v1xw9eqvhCnkQj9OCliiWy2zi1nk6cIUuwtGwOi1kEUur1HPv7wH3cXcyIwP7aGXUaTa2n2uRCxJMB9/vVI8K0iD0SO/krxM88tW4Ncz4RpThZDg4lMZ5Cd2w7pQVHNKOfR04U6r7QCntirFIkZb6Q0sLilDSJE4k7nEGMaFTTCNYouQxR02l8PgUGUScJnUwRyxu+plOTA3wyQ2QPbLukN8Q2ImxW8WK/CuOOBHqeijm6B2zQGDGn4A65yJOMpI7LysOfYJrvYD+2f0AcHoA6HyGuksDdl9TgDCeV+Fpr61HT/7hinkJs14q0gd008HPkkTrzYFh2kEDQ9MgIZBTTDkEtUyLPkZrVZgjLSu386A3hoHZO+nasu6fdwXIUtRdRJB8nEfW+wpEy6m3WFDdLEfJGnxHLuz/m6h5cUNyLZfv0QSXdrRRUNTovrqc5ULxM4X+KybZSGcbeXu+7WMANoliqVJXVWN59No2jgEji4oHuIksvH8XdliU1h3G8vX9s/XFJswUlvzTIwkPnOXWGMXvx7CHMSESIjn96IaEcjyrV6A7ePX7yLatWJ3wnniR5m9TdVTcQWuukO72727KzDa+eE/XcfvcO920Px/c/7ru9yPGu4f3KnE9tqJ84+d252Qa6XGG8mf3uZtJ0vBjd7qyc+yO014z82zSZNFmxENyulk2x3xulP+9aNqVau375ykEzkfjmR936jRjJH/MVNmetgh+djR94jI/l52xWvbnlxDkiVmDllAOYIL/nCeOkiWEsNMzZTiFWdC40Dtob4i/5BntnyQoP6AvJOBZJmIHN8Kb0YlEKpWSm1nomswglEdJxCer8UKBYK+CVZtJLo3GZoZypwHtT0gmmkkWRthH0ONKWxBK8MYTu4gRPf2niwU5UqWRo7XdtINUNzQ29DZzR8MhNUQmYXDExJXNDqhtzA72iZCbuEUbDuGRwiWBcwZgARBrCmSd483TB3DjU6QFNdSykkjDZkDtS1TIlQtsY1EZkdLztVwyM8hqyipXqfp5ElmLpJhlDuymLeghdqHmMVSxjAveHVnDWV4YT2nq0JNa22BFKrgABEfro5DfFEDaf+FVnrDmIYvDJnHd4S6q3nBL6lqLE1VpProESbpxQZzREYROJYo8aiMMLqhWNK8JB0yMT9UCRygHVmoikjVpRSj6zKRxQrctaWWu0x1RIhMFQeWCk6ybYQjhgKlUvPuncxTPmivmyU8smqZymCmfmA3XVZBtHzX7vVNctAdSi9RB266oRtkr24gS159EgSjdW9VVVLwWEgat7A8OiLbHvb0QcXPcAxK5lLptkraBqUvJ54GcMFGz4kux+2jt8hX2o/IjVFVUaDPKDU3XvdaC5q12Fyv3wKlqJDov6PZT/4MhpG1n9rcTi32u3knq+d2RbTAPqRe0L22IaUE99OLbFNKBdQS3DMAzDMAzDMAzDMAzDMAzDMAzDMAwwfwFO7UOL/s7xgQAAAABJRU5ErkJggg=="
+                alt="">
+            <span>Hemasaketh</span>
+            <i class="bx bx-caret-down"></i>
+        </div>
+    </header>
+
+    <!--Home-->
+
+    <section class="home swiper" id="home">
+
+        <div class="swiper-wrapper">
+
+
+            <!--slide 1-->
+
+            <div class="swiper-slide container">
+
+                <div class="home-text">
+                    <span>We give u the "<u>Pleasure</u>"</span>
+                    <h1>Choose "Pleasure" <br> the best healthy <br> chicken salad</h1>
+                    <a href="#" class="btn">Shop Now<i class="bx bx-right-arrow-alt"></i></a>
+                </div>
+                <img src="https://images.herzindagi.info/image/2021/Sep/chaii-samosa.jpg" alt="sorry">
+
+
+            </div>
+
+            <!--Slide 2-->
+
+            <div class="swiper-slide container">
+
+                <div class="home-text">
+                    <span>We give u the "<u>Pleasure</u>"</span>
+                    <h1>Choose "Pleasure"<br> the best healthy <br> chicken salad</h1>
+                    <a href="#" class="btn">Shop Now<i class="bx bx-right-arrow-alt"></i></a>
+                </div>
+                <img src="https://media.istockphoto.com/id/1400398000/photo/victoria-sandwich-cake-decorated-with-strawberries-blueberries-and-mint-closeup.jpg?s=612x612&w=is&k=20&c=lPa2UqiKu_Ij8pIuob5zl3rzRQv0JcvP4I-G7dbyW1w="
+                    alt="">
+
+
+            </div>
+
+
+            <!--Slide 3 -->
+
+            <div class="swiper-slide container">
+
+                <div class="home-text">
+                    <span>We give u the "<u>Pleasure</u>"</span>
+                    <h1>Choose "Pleasure" <br> the best healthy <br> chicken salad</h1>
+                    <a href="#" class="btn">Shop Now<i class="bx bx-right-arrow-alt"></i></a>
+                </div>
+                <img src="https://media.istockphoto.com/id/686623972/photo/preparing-homemade-donuts.jpg?s=612x612&w=0&k=20&c=uTBMKwB26mPgptOIEEZqRbwd8K2bBogEBTgqCDrj5c0="
+                    alt="">
+
+
+            </div>
+
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </section>
+
+
+    <!--Categories-->
+    <section class="categories" id="categories">
+        <div class="heading">
+            <h1>
+                Browse Our Hottest <br><span>Categories</span>
+            </h1>
+            <a href="categories.html" class="btn">See All<i class="bx bx-right-arrow-alt"></i></a>
+
+        </div>
+
+
+        <!--Container content-->
+        <div class="categories-container">
+
+            <!--Box 1-->
+            <div class="box box1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrmbaVqPHoDwEtqsisoBCGAy2oQEZ4SdG3E3tmeiKIwQ&s"
+                    alt="">
+                <h2>Fruits</h2>
+                <span>10 Items</span>
+                <i class="bx bx-right-arrow-alt"></i>
+            </div>
+
+            <!--Box 2-->
+            <div class="box box2">
+                <img src="https://www.shutterstock.com/image-photo/composition-raw-vegetables-wicker-basket-260nw-73700551.jpg"
+                    alt="">
+                <h2>Vegetables</h2> 
+                <span>14 Items</span>
+                <i class="bx bx-right-arrow-alt"></i>
+            </div>
+
+            <!--Box 3-->
+            <div class="box box3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiEckRAF-FaFkt6TmHNXEx1BYSrNpGBdV-oq86n2PzKTeXqkctmEiBO3jWTbASjP2fqwU&usqp=CAU"
+                    alt="">
+                <h2>Soft Drinks</h2>
+                <span>8 Items</span>
+                <i class="bx bx-right-arrow-alt"></i>
+            </div>
+
+            <!--Box 4-->
+            <div class="box box4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjfEzCjtZOjOpcRPPd3ENpJRFn-OwE6tWyLg&usqp=CAU"
+                    alt="">
+                <h2>Fresh Nuts</h2>
+                <span>9 Items</span>
+                <i class="bx bx-right-arrow-alt"></i>
+            </div>
+
+
+            <!--Box 5-->
+            <div class="box box5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-XrCkkbYpBRToM3WuhjPZdMMdPsIohxXMPA&usqp=CAU"
+                    alt="">
+                <h2>Spices</h2>
+                <span>12 Items</span>
+                <i class="bx bx-right-arrow-alt"></i>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <!--Products-->
+    <section class="products" id="products">
+
+        <div class="heading">
+            <h1>
+                Our Popular <br><span>Products</span>
+            </h1>
+            <a href="#" class="btn">Shop Now<i class="bx bx-right-arrow-alt"></i></a>
+
+        </div>
+
+        <!--Product Content-->
+
+        <div class="products-conatiner">
+
+            <!--Box 1-->
+            <div class="box">
+                <img src="https://www.shutterstock.com/image-photo/veg-biryani-260nw-142854022.jpg"
+                    alt="">
+                <span>Fresh Items</span>
+                <h2><i>Veg biryani</i></h2>with fresh vegetables</h2>
+                <h3 class="price">Rs.120</h3>
+                <a href="categories.html"><i class="bx bx-cart-alt"></i></a> 
+                <i class="bx bx-heart"></i>
+                <span class="discount">-15%</span>
+            </div>
+
+            <!--Box 2-->
+
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLwcqgI2bZA9yKGf07I8UIFe5qCFOtALUGg&usqp=CAU"
+                    alt="">
+                <span>Fresh Items</span>
+                <h2><i>Parotta</i></h2><br>per piece</h2>
+                <h3 class="price">Rs.15</h3>
+                <i class="bx bx-cart-alt"></i>
+                <i class="bx bx-heart"></i>
+                <span class="discount">-5%</span>
+            </div>
+
+
+            <!--Box 3-->
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP6AlsY64CMBtlrPiP137YFtHq-asKTix06Q&usqp=CAU"
+                    alt="">
+                <span>Fresh Items</span>
+                <h2>Non-Veg <br><i>Chicken Biryani</i></h2>
+                <h3 class="price">Rs.180</h3>
+                <i class="bx bx-cart-alt"></i>
+                <i class="bx bx-heart"></i>
+                <span class="discount">-12%</span>
+            </div>
+
+
+            <!--Box 4-->
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpBGRZryPsUw1_GctPytja5PxJDaq7BeXZbg&usqp=CAU"
+                    alt="">
+                <span>Fresh Items</span>
+                <h2>Non-veg <br><i>Dragon Chicken</i></h2>
+                <h3 class="price">Rs.150</h3>
+                <i class="bx bx-cart-alt"></i>
+                <i class="bx bx-heart"></i>
+                <span class="discount">-5%</span>
+            </div>
+
+
+            <!--Box 5-->
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDIC7RRZD8MobgI6MEAeh0uIt4rOjAEHIUeA&usqp=CAU"
+                    alt="">
+                <span>Fresh Items</span>
+                <h2>Veg Item<br><i>Khaju Biryani </i></h2>
+                <h3 class="price">Rs.130</h3>
+                <i class="bx bx-cart-alt"></i>
+                <i class="bx bx-heart"></i>
+                <span class="discount">-20%</span>
+            </div>
+
+            <!--Box 6-->
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvZZsagytQSPVdYKlyL_N7kvSOGkPgjk5C0A&usqp=CAU"
+                    alt="">
+                <span>Fresh Items</span>
+                <h2>Veg-Item <br><i>Panner Curry</i></h2>
+                <h3 class="price">Rs.125</h3>
+                <i class="bx bx-cart-alt"></i>
+                <i class="bx bx-heart"></i>
+                <span class="discount">-4%</span>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <!--About-->
+
+    <section class="about" id="about">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTfLlPV4RxohBmdGzDf-tMpqGPw9zQIf6vSpzbA9-dkYjzgs7YpAEDvMsp_-8-izSrqxA&usqp=CAU"
+            alt="">
+
+        <div class="about-text">
+            <span>About us</span>
+            <p>We Provide the Quaity food.</p>
+            <p>And also known for best maintanence of the hotel and food items</p>
+            <p>We have chef to get and deliver high Quality food.</p>
+            <p>Thanks For Visiting</p>
+
+
+            <a href="#" class="btn">Learn More<i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+
+
+    </section>
+
+
+    <!--Customers-->
+
+    <section class="customers" id="customers">
+
+        <h2>Why Customer's Love us?</h2>
+
+        <!--Customer Content-->
+
+        <div class="customers-container">
+            <!--Review 1-->
+            <div class="box">
+                <i class="bx bxs-quote-alt-left"></i>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>A good Website. Preferable.
+                    I enjoooooyed my food. </p>
+
+                <div class="review-profile">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFP-3ySUT6iqk1mAG9ypNTUAMU67poL8s-zA&usqp=CAU"
+                        alt="">
+
+
+                    <h3>Valli</h3>
+
+
+
+                </div>
+
+            </div>
+
+
+            <!--Review 2-->
+            <div class="box">
+                <i class="bx bxs-quote-alt-left"></i>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <p>This Website has best delivery timings and also food.</p>
+
+                <div class="review-profile">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7YLo1N4r-FtARijDEJbMzOR2oX82z0z2tOqtlJ18ps8kaId3nkdODA7wGzr51AyDPwVA&usqp=CAU"
+                        alt="">
+
+
+                    <h3>Chandini</h3>
+
+
+
+                </div>
+
+            </div>
+
+
+
+            <!--Review 3-->
+            <div class="box">
+                <i class="bx bxs-quote-alt-left"></i>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <p>I am wondering that , there are some websites that delivers good stuff.</p>
+
+                <div class="review-profile">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7FWIUwKPXDr7_xWt_Zcj7hQi5IVbOjjHDvA&usqp=CAU"
+                        alt="">
+
+
+                    <h3>Prabha</h3>
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </section>
+
+    <section class="footer" id="footer">
+        <div class="footer-box">
+            <a href="#" class="logo"><i class="bx bxs-basket"></i>Delicay</a>
+            <p> GymVast, 50th Street, 4th <br>Floor, NYC 1022</p>
+             <div class="social">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-youtube"></i></a>
+             </div>
+        </div>
+        <div class="footer-box">
+            <h2>Categories</h2>
+            <a href="#">Fruits & Vegetables</a>
+            <a href="#">Dairy Products</a>
+            <a href="#">Package Foods</a>
+            <a href="#">Beverages</a>
+        </div>
+
+        <div class="footer-box">
+            <h2>Useful Links</h2>
+            <a href="payment.html">Payment & Tax</a>
+            <a href="#">Terms Of use</a>
+            <a href="#">My Blog</a>
+            <a href="#">Return Policy</a>
+        </div>
+
+        <div class="footer-box">
+            <h2>Newsletter</h2>
+            <p>Get 10% Discount with <br>Email Newsletter</p>
+            <form action="">
+                <i class="bx bxs-envelope"></i>
+                <input type="email" name="" id="" placeholder="Enter Your Email">
+
+                 <i class="bx bx-arrow-back bx-rotate-180"></i>
+
+            </form>
+        </div>
+
+    </section>
+     
+    <!--copy right-->
+    <div class="copyright">
+        <p>&#169; Hemasaketh Team All Right Reserved</p>
+
+    </div>
+
+
+    <!--swiper js-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+
+    <!-- link to Js-->
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
